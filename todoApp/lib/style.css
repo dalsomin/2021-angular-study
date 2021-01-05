@@ -1,0 +1,8 @@
+.input-group .ng-valid.ng-dirty {
+    /* 입력한값이 valid할때 */
+    border: solid 2px green
+}
+
+.input-group .ng-invalid.ng-dirty {
+    border: solid 2px red
+}

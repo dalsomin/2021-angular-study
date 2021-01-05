@@ -1,0 +1,13 @@
+<form name="todoForm" ng-submit="addTodo(newTodoTitle)">
+        <div class="input-group">
+          <input type="text" class="form-control" ng-model="newTodoTitle" placeholder="새로운 todo를 입력하세요..." minlength="3">
+          <span class="input-group-btn">
+            <button class="btn btn-warning" type="submit">추  가</button>
+          </span>
+        </div>
+        <div ng-show="todoForm.$dirty && todoForm.$invalid">
+          <div class="alert alert-warning" role="alert">
+            세 글자 이상을 입력해주세요...! 
+          </div>
+        </div>
+      </form>

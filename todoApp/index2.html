@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css" />
+    <script src="lib/script.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  </head>
+
+  <body ng-app="TodoApp" ng-cloak>
+    <div ng-controller="TodoCtrl">
+    <div class="container">
+      <h1>{{name}}'s Todolist </h1>
+      <form name="todoForm" ng-submit="addTodo(newTodoTitle)">
+        <div class="input-group">
+          <input type="text" class="form-control" ng-model="newTodoTitle" placeholder="새로운 todo를 입력하세요..." minlength="3">
+          <span class="input-group-btn">
+            <button class="btn btn-warning" type="submit">추  가</button>
+          </span>
+        </div>
+        <div ng-show="todoForm.$dirty && todoForm.$invalid">
+          <div class="alert alert-warning" role="alert">
+            세 글자 이상을 입력해주세요...! 
+          </div>
+        </div>
+      </form>
+
+      <pre>{{todoForm | json}}</pre>
+      <!-- {
+        "$error": {},
+        "$name": "todoForm",
+        "$dirty": false, input태그에 입력을 하자마자 true로 바뀐다. 
+        "$pristine": true, dirty와 반대
+        "$valid": true, 입력한폼의 입력값이 valid 하면 true, 아니면 false
+        "$invalid": false, 반대개념 
+        "$submitted": false
+      } -->
+      <br/>
+      
+      <div class="container">
+        <button class="btn btn-primary" ng-click="statusFilter={completed:true}">completed  </button>
+        <button class="btn btn-primary" ng-click="statusFilter={completed:false}">active  </button>
+        <button class="btn btn-primary" ng-click="statusFilter={}">all  </button>
+      <div> 
+      <br/>
+      <ul class="list-unstyled">
+        <li class ng-repeat="todo in todos | filter: statusFilter ">
+          <div class="col-lf-6">
+          <div class="input-group mb-3">
+            <div class="input-group-text">
+              <input class="form-check-input" type="checkbox" ng-model="todo.completed">
+            </div>
+            <input type="text" class="form-control" ng-model="todo.title">
+            <div class="input-group-btn">
+              <button class="btn btn-danger" type="button" ng-click="remove(todo)">삭 제</button>
+              <button class="btn btn-success" type="button" ng-click="addLike(todo)">좋아요👍+{{todo.like}}  </button>
+            </div>
+            <date>{{todo.createdAt | date : 'yyyy-MM-dd HH:mm:ss' }}</date>
+
+          </div>
+          </div>
+        </li>
+      </ul>
+    </div> 
+
+
+    </div>
+  </body>
+</html>

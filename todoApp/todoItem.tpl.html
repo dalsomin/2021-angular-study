@@ -1,0 +1,14 @@
+          <div class="col-lf-6">
+            <div class="input-group mb-3">
+              <div class="input-group-text">
+                <input class="form-check-input" type="checkbox" ng-model="todo.completed">
+              </div>
+              <input type="text" class="form-control" ng-model="todo.title">
+              <div class="input-group-btn">
+                <button class="btn btn-danger" type="button" ng-click="remove(todo)">삭 제</button>
+                <button class="btn btn-success" type="button" ng-click="addLike(todo)">좋아요👍+{{todo.like}}  </button>
+              </div>
+              <date>{{todo.createdAt | date : 'yyyy-MM-dd HH:mm:ss' }}</date>
+
+            </div>
+          </div> 
