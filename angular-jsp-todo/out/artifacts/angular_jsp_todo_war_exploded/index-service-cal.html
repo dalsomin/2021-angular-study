@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_ko-kr.min.js"
+            integrity="sha512-L+5r2Nh9KpPL1tmoowEEzeUoA87hDSSkUvY2lH26VvWaxL3GBvHknSulPL9Ajatv8wx8mDoCPaNBCqkqA4qS4A=="
+            crossorigin="anonymous"></script>
+    <script>
+        var app = angular.module("test_app",[]);
+        app.service("myService", function () {
+            //이 myservice가 만들어진 후에 함수가 호출된다. 서비스객체에 접근 가능
+            //실행중 객체에 멤버를 추가하는게 굉장히 자유롭다.
+            this.add = function (a1, a2) {
+                return a1 + a2
+            }
+            this.subtract = function (a1, a2) {
+                return a1 - a2
+            }
+
+        })
+        app.controller("controller1", function($scope, $location, $http, $timeout, $interval , myService){
+            $scope.data1 = 100;
+            $scope.data2 = $location.absUrl();
+            $scope.data3 = location.href;
+            $scope.moveTo = function () {
+                location.href = $scope.a1
+               // $location.absUrl($scope.a1) // 얘는 작동을 안한다. //주소창의 주소를 가져올수는 있지만 주소를 이동할 수 는 없다.
+            }
+            $scope.getAjax = function () {
+                var http = $http.get("data.html")
+                http.then(function (response){
+                    $scope.result1 = response.data
+                })
+            }
+            $timeout(function () {
+                $scope.result2 = "timeout!"
+            }, 1000)
+
+            $interval(function () {
+                $scope.result3 = new Date()
+            }, 1000)
+            $scope.result4 = myService.add(100,200)
+            $scope.result5 = myService.subtract(100,200)
+            $scope.calResult=0
+            $scope.addFn = function(a1, a2){
+                $scope.calResult= myService.add(a1, a2);
+            }
+            $scope.subFn = function (a1, a2) {
+               $scope.calResult= myService.subtract(a1, a2)
+            }
+        })
+    </script>
+    <title>서비스</title>
+</head>
+<body>
+<div ng-app="test_app" ng-controller="controller1">
+    <p>scope.data1:{{data1}}</p>
+    <p>$location.absUrl():{{data2}} : angular에서 제공: 주소창의 주소를 그대로 복사해서 출력하는 함수 $location.absUrl()</p>
+    <p>location.href:{{data3}} : js에서 제공: </p>
+    <hr>
+    <input type="text" ng-model="a1"/>
+    <button type="button" ng-click="moveTo()">이동</button>
+    <hr>
+    <button type="button" ng-click="getAjax()">ajax 통신</button>
+    <p>{{result1}}</p>
+    <hr>
+    <p>{{result2}}</p>
+    <hr>
+    <h3>$interval : 지정된 시간만큼 지정된 함수가 계속 호출됨</h3>
+    <p>{{result3}}</p>
+    <hr>
+    <p>{{result4}}</p>
+    <p>{{result5}}</p>
+    <input type="number" ng-model="num1">
+    <input type="number" ng-model="num2">
+    <button ng-click="addFn(num1, num2)">+</button>
+    <button ng-click="subFn(num1, num2)">-</button>
+    <p>결과 :{{calResult}}</p>
+</div>
+</body>
+</html>

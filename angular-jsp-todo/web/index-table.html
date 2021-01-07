@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_ko-kr.min.js"
+            integrity="sha512-L+5r2Nh9KpPL1tmoowEEzeUoA87hDSSkUvY2lH26VvWaxL3GBvHknSulPL9Ajatv8wx8mDoCPaNBCqkqA4qS4A=="
+            crossorigin="anonymous"></script>
+
+    <script>
+        var app = angular.module("test_app", []);
+
+        app.controller("controller1", function ($scope,$http) {
+            $scope.memberObj = [
+                {
+                    name: "홍길동",
+                    age:21
+                },
+                {
+                    name: "강길동",
+                    age:27
+                },
+                {
+                    name: "박길동",
+                    age:40
+                }
+            ];
+
+            var http = $http.get("data3.html");
+            http.then(function (response) {
+                alert(response.data)
+                $scope.ajaxData =response.data;
+            })
+
+        });
+
+
+    </script>
+    <title>테이블</title>
+</head>
+<body >
+<div ng-app="test_app" ng-controller="controller1">
+
+    <table border="1">
+        <tbody>
+            <tr ng-repeat="a in ajaxData">
+                <td>{{ $index + 1 }}</td>
+                <td>{{a.name}}</td>
+                <td>{{a.age}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+<hr>
+    <table border="1">
+        <tbody>
+        <tr ng-repeat="d in memberObj ">
+            <td>{{ $index + 1 }}</td>
+            <td ng-if="$odd" style="color:#ffa754">{{d.name}}</td>
+            <td ng-if="$even" style="color:cadetblue">{{d.name}}</td>
+            <td style="color:blue">{{d.age}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

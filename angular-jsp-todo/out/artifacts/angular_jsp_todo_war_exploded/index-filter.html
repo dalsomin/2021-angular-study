@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_ko-kr.min.js" integrity="sha512-L+5r2Nh9KpPL1tmoowEEzeUoA87hDSSkUvY2lH26VvWaxL3GBvHknSulPL9Ajatv8wx8mDoCPaNBCqkqA4qS4A==" crossorigin="anonymous"></script>
+    <script>
+        var app = angular.module("test_app",[]);
+        app.run(function($rootScope){
+            $rootScope.data1 = "abCDef"
+            $rootScope.data2 = [{a1: "sam", a2: 100},{a1: "maria", a2:30},{a1:"tom", a2: 40},{a1:"hoo", a2:20}]
+            $rootScope.data3 = 12345678.12345
+            $rootScope.data4 = Date.now()
+            $rootScope.data5 = ["banana", "apple", "cherry", "grape", "orange"]
+
+
+        })
+    </script>
+    <title>필터</title>
+</head>
+<body>
+    <div ng-app="test_app">
+        <p>upper case = {{data1 | uppercase}}</p>
+        <p>lower case = {{data1 | lowercase}}</p>
+        <hr>
+        <h3>정렬 전 </h3>
+        <p ng-repeat="d2 in data2">{{d2}}</p>
+        <hr>
+        <h3>정렬 후 : a1 중심</h3>
+        <p ng-repeat="d2 in data2 | orderBy : 'a1' ">{{d2}}</p>
+        <h3>정렬 후 : a2 중심</h3>
+        <p ng-repeat="d2 in data2 | orderBy : 'a2' ">{{d2}}</p>
+        <h3>화폐단위</h3>
+        <p>{{data3 | currency}}</p>
+        <h3>날짜</h3>
+        <p>{{date4}}</p>
+        <p>{{data4 | date : "yyyy년mm월dd일 HH시 mm분 ss초 EEEE일"}}</p>
+        <h3>검색 필터 </h3>
+        <input type="text" ng-model="keyword" ><br/>
+        <p ng-repeat="str in data5 | filter : keyword ">{{str}}</p>
+        <h3>limitTo </h3>
+        <p ng-repeat="str in data5 | limitTo : 3 : 1">{{str}}</p>
+        <p >{{data1| limitTo : 3}}</p>
+        <p >{{data3| number}}   기본은 3자리</p>
+        <p >{{data3| number : 2}}</p>
+    </div>
+</body>
+</html>
