@@ -1,0 +1,9 @@
+.test_css_ng-not-empty{
+    background-color: blueviolet;
+}
+.test_css_ng-touched{
+    width: 100px;
+}
+.test_css_ng-untouched{
+    width: 500px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_ko-kr.min.js"
+            integrity="sha512-L+5r2Nh9KpPL1tmoowEEzeUoA87hDSSkUvY2lH26VvWaxL3GBvHknSulPL9Ajatv8wx8mDoCPaNBCqkqA4qS4A=="
+            crossorigin="anonymous"></script>
+    <title>http중요</title>
+    <script>
+        var app = angular.module("test_app",[])
+
+        app.controller("controller1", function ($scope, $http, $timeout) {
+            $scope.Ajax_Get = function () {
+                var http = $http.get("data1.html");
+                http.then(function (response) {
+                    $scope.ajaxGetResult =response.data
+                })
+            }
+            $scope.Ajax_Post = function () {
+                var http = $http.post("data1.html");
+                http.then(function (response) {
+                    $scope.ajaxPostResult =response.data
+                })
+            }
+            $scope.Ajax_Basic = function () {
+                var http= $http({
+                    method: "post",
+                    url: "data1.html"
+                })
+                http.then(function (response) {
+                    $scope.ajaxBasicResult=response.data
+                })
+            }
+            $scope.Ajax_Json = function () {
+                var http= $http({
+                    method: "get",
+                    url: "data2.html"
+                })
+                http.then(function (response) {
+                    $scope.ajaxJsonResult=response.data
+                })
+            }
+
+        })
+    </script>
+</head>
+<body>
+    <div ng-app="test_app" ng-controller="controller1">
+        <button type="button" ng-click="Ajax_Get()">Ajax Get</button>
+        <p>{{ajaxGetResult}}</p>
+        <button type="button" ng-click="Ajax_Post()">Ajax Post</button>
+        <p>{{ajaxPostResult}}</p>
+        <button type="button" ng-click="Ajax_Basic()">Ajax Basic</button>
+        <p>{{ajaxBasicResult}}</p>
+        <button type="button" ng-click="Ajax_Json()">Ajax Json</button>
+        <input type="text" ng-model="keyNum"><br/>
+        <p ng-repeat="j in ajaxJsonResult | orderBy : keyNum ">{{j}}</p>
+
+    </div>
+</body>
+</html>
