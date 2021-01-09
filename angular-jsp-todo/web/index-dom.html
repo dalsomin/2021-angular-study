@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_ko-kr.min.js"
+            integrity="sha512-L+5r2Nh9KpPL1tmoowEEzeUoA87hDSSkUvY2lH26VvWaxL3GBvHknSulPL9Ajatv8wx8mDoCPaNBCqkqA4qS4A=="
+            crossorigin="anonymous"></script>
+    <title>DOm 제어</title>
+    <script>
+        var app = angular.module("test_app",[])
+        app.controller("controller1", function($scope){
+            $scope.showAlert=function () {
+                alert("버튼을 눌렀습니다.")
+            }
+        })
+    </script>
+</head>
+<body>
+<div ng-app="test_app" ng-controller="controller1">
+    <button type="button" ng-click="show-alert()" ng-disabled="btnDisabled">button</button>
+    <br/>
+    <input type="checkbox" ng-model="btnDisabled">버튼 활성화/비활성화
+    <br/>
+    <p ng-show="wordDisabled">
+        문자열이 보일까요?
+    </p>
+    <input type="checkbox" ng-model="wordDisabled"> 문자열 보이기
+    <br/>
+    <p ng-hide="wordHide">
+        문자열 숨길거야
+    </p>
+    <input type="checkbox" ng-model="wordHide"> 문자열 숨기기
+</div>
+</body>
+</html>
