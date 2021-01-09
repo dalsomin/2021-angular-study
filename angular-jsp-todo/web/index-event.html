@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_ko-kr.min.js"
+            integrity="sha512-L+5r2Nh9KpPL1tmoowEEzeUoA87hDSSkUvY2lH26VvWaxL3GBvHknSulPL9Ajatv8wx8mDoCPaNBCqkqA4qS4A=="
+            crossorigin="anonymous"></script>
+    <title>이벤트처리 </title>
+    <script>
+        var app = angular.module("test_app", [])
+
+        app.controller("controller1", function($scope){
+
+            $scope.a1 = 0
+            $scope.a2 = 0
+            $scope.a3 = 0
+
+            $scope.enter=function () {
+                // $scope.boxEnter = "마우스가 박스안으로 들어갔습니다! "
+                $scope.boxEnter = $scope.a1++
+
+            }
+            $scope.leave= function () {
+                $scope.boxLeave = "마우스가 빠져나갔습니다 ! "
+            }
+            $scope.move= function () {
+                $scope.boxMove = "마우스가 움직입니다! "
+            }
+            $scope.clickDown= function () {
+                $scope.boxClickDown = "마우스를 눌렀습니다! "
+            }
+            $scope.clickUp= function () {
+                $scope.boxClickUp = "마우스가 눌렀다가 뗏습니다 "
+            }
+            $scope.over= function () {
+                $scope.boxOver= $scope.a2++
+            }
+            $scope.out= function () {
+                $scope.boxOut = "마우스가 눌렀다가 뗏습니다 "
+            }
+            $scope.change = function () {
+                $scope.boxChange = "입력값이 변경되고있습니다::"+$scope.inputChange
+            }
+            $scope.copy = function () {
+                $scope.boxCopy = "복사되었습니다"+$scope.inputCopy
+            //    잘라넣거나 붙여넣기 하면 change 이벤트가 먹는다.
+            }
+            $scope.cut = function () {
+                $scope.boxCut = "복사되었습니다::"+$scope.inputCut
+                //    잘라넣거나 붙여넣기 하면 change 이벤트가 먹는다.
+            }
+            $scope.paste = function () {
+                $scope.boxPaste = "붙여넣기::"+$scope.inputPaste
+                //    잘라넣거나 붙여넣기 하면 change 이벤트가 먹는다.
+            }
+        })
+    </script>
+     <link rel="stylesheet" href="index-event.css">
+</head>
+<body>
+<div ng-app="test_app" ng-controller="controller1">
+    <div class="box" ng-mouseenter="enter()" ng-mouseleave="leave()" ng-mousemove="move()" ng-mousedown="clickDown()" ng-mouseUp="clickUp()">
+        <div class="innerBox" ng-mouseover="over()" ng-mouseout="out()">
+
+        </div>
+    </div>
+    <p>boxEnter: {{boxEnter}}</p>
+    <p>boxLeave: {{boxLeave}}</p>
+    <p>boxMove: {{boxMove}}</p>
+    <p>boxClickDown: {{boxClickDown}}</p>
+    <p>boxClickUp: {{boxClickUp}}</p>
+    <p>boxOver: {{boxOver}}</p>
+    <p>boxOut: {{boxOut}}</p>
+    <hr>
+    <div class="box">
+
+    </div>
+    <hr>
+    <input type="text" ng-change="change()" ng-model="inputChange">
+    <p>{{boxChange}}</p>
+    <hr>
+    <input type="text" ng-copy="copy()" ng-model="inputCopy">
+    <p>{{boxCopy}}</p>
+    <hr>
+    <input type="text" ng-cut="cut()" ng-model="inputCut">
+    <p>{{boxCut}}</p>
+    <hr>
+    <input type="text" ng-paste="paste()" ng-model="inputPaste">
+    <p>{{boxPaste}}</p>
+</div>
+</body>
+</html>
