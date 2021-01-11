@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_ko-kr.min.js"
+            integrity="sha512-L+5r2Nh9KpPL1tmoowEEzeUoA87hDSSkUvY2lH26VvWaxL3GBvHknSulPL9Ajatv8wx8mDoCPaNBCqkqA4qS4A=="
+            crossorigin="anonymous"></script>
+    <title>select</title>
+    <script>
+        var app = angular.module("test_app",[]);
+        
+        app.controller("controller1", function ($scope) {
+            $scope.data1 = ["apple","potato","water"]
+            $scope.select1 = $scope.data1[0]
+            $scope.select2 = $scope.data1[0]
+            $scope.select3 = $scope.data1[0]
+
+            $scope.data2 = [
+                {label:"사과", value:"apple"},
+                {label:"바나나", value:"banana"},
+                {label:"체리", value:"cherry"}
+                ]
+            $scope.select4 = $scope.data2[0].value
+            $scope.select5 = $scope.data2[0]
+            $scope.data3 = [
+                {사과:"apple"},
+                {바나나:"banana"},
+                {체리:"cherry"}
+            ]
+            $scope.select6 = $scope.data3.사과
+            $scope.data4 = {
+                item1:{a1:"a100", a2:"a200", a3:"a300"},
+                item2:{a1:"a101", a2:"a201", a3:"a302"},
+                item3:{a1:"a101", a2:"a202", a3:"a303"},
+            }
+            $scope.select7 = $scope.data4.item1
+            $scope.select7Table = $scope.data4.item1
+        })
+    </script>
+</head>
+<body>
+<div ng-app="test_app" ng-controller="controller1">
+    <select ng-model="select1">
+        <option ng-repeat="str in data1" value="{{str}}">{{str}}</option>
+    </select>
+    <p>{{select1}}</p>
+    <hr>
+    <select ng-model="select2">
+        <option ng-repeat="str in data1">{{str}}</option>
+    </select>
+    <p>{{select2}}</p>
+    <hr>
+    <select ng-model="select3" ng-options="str for str in data1"></select>
+    <p>[value] for [option항목값] in 반복할배열</p>
+    <p>{{select3}}</p>
+    <hr>
+    <select ng-model="select4" >
+        <option ng-repeat="d in data2" value="{{d.value}}">{{d.label}}</option>
+    </select>
+    <p>{{select4}}</p>
+    <hr>
+    <select ng-model="select5" ng-options="obj.label for obj in data2"></select>
+    <p>{{select5.value}}</p>
+    <hr>
+    <select ng-model="select6" ng-options="a1 for (a1, a2) in data3"></select>
+    <p>{{select6}}</p>
+
+    <select ng-model="select7" ng-options="label for (label, value) in data4"></select>
+    {{select7}}
+    <hr>
+    {{select7.a1}}
+    <hr>
+    {{select7table}}
+    <table border="1">
+        <tr ng-repeat="s in select7">
+            <td>{{s}}</td>
+
+        </tr>
+    </table>
+</div>
+</body>
+</html>
