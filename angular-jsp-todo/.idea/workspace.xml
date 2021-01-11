@@ -6,7 +6,26 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae0abf81-c7e8-40b4-b3ab-b36187a5798f" name="Default Changelist" comment="" />
+    <list default="true" id="ae0abf81-c7e8-40b4-b3ab-b36187a5798f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/web/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/index-route1_route.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/index-route2_ui_router.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/index-route3-nestedview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/index-route3-routemodule.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/component/mainComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/component/tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/page1_route2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/page1_route3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/page2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/view/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/angular_jsp_todo_war_exploded/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/angular_jsp_todo_war_exploded/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index-event.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/index-event.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index-input.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index-input.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +40,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -29,28 +56,36 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1mgnFl9WMO71GdAkzwdFg0DZLFH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="play.paths.configuration" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\selfstudy2021\angular-jsp-todo\web" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\selfstudy2021\angular-jsp-todo\web" />
     </key>
   </component>
@@ -118,10 +153,25 @@
       <updated>1609923999108</updated>
       <workItem from="1609924002363" duration="2529000" />
       <workItem from="1609990266286" duration="24828000" />
+      <workItem from="1610066192986" duration="4197000" />
+      <workItem from="1610360426242" duration="6014000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

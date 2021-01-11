@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_ko-kr.min.js"
+            integrity="sha512-L+5r2Nh9KpPL1tmoowEEzeUoA87hDSSkUvY2lH26VvWaxL3GBvHknSulPL9Ajatv8wx8mDoCPaNBCqkqA4qS4A=="
+            crossorigin="anonymous"></script>
+    <title>라우트</title>
+    <script>
+        var app = angular.module('test_app',['ngRoute'])
+//angular에서 제공하는 기본 라이브러리가 아니라 외부 라이브러리를 쓸때 [] 안에 넣어준다.
+        app.config(function ($routeProvider) {
+            $routeProvider.when("/",{
+                template:"<h1>MainPage</h1>"
+            })
+            $routeProvider.when("/page1",{
+                template:"<h1>page1</h1><p>{{data1}}</p>",
+                controller:"controller1"
+            })
+            $routeProvider.when("/page2",{
+                templateUrl :"page2.html",
+                controller:"controller2"
+            })
+        })
+
+        app.controller('controller1',function($scope){
+            $scope.data1 = "controller1에서 셋팅한 문자열"
+        })
+        app.controller('controller2',function($scope, $http){
+            $scope.data2 = "controller2에서 셋팅한 문자열"
+            var http = $http.get("data.json")
+            http.then(function (response) {
+                $scope.jsonData = response.data
+            })
+        })
+    </script>
+</head>
+<body>
+<div ng-app="test_app">
+    <a href="#/!">main page</a>
+    <a href="#!page1">page1</a>
+    <a href="#!page2">page2</a>
+    <div ng-view>
+<!--
+
+ route-->
+    </div>
+</div>
+</body>
+</html>

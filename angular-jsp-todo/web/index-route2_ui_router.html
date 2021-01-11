@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.19/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.7.2/angular-locale_ko-kr.min.js"
+            integrity="sha512-L+5r2Nh9KpPL1tmoowEEzeUoA87hDSSkUvY2lH26VvWaxL3GBvHknSulPL9Ajatv8wx8mDoCPaNBCqkqA4qS4A=="
+            crossorigin="anonymous"></script>
+    <script>
+        var app = angular.module("test_app", ["ui.router"])
+        app.config(function ($stateProvider, $urlRouterProvider) {
+            //어떤 요청이 발생했을 때 , 어느부분을 실행하고 어떻게 처리를 할 것인지에대한 정보를 가지고 있는 것이 stateprovider이다.
+            $urlRouterProvider.otherwise("mainSomin")
+            var mainState = {
+                name: "mainSomin",
+                url: "/abc",
+                template: "<h1>main</h1>"
+            }
+            var page1State = {
+                name: "page1",
+                url: "/page1",
+                templateUrl: "page1_route2.html",
+                controller: "page1Controller"
+            }
+
+            $stateProvider.state(mainState)
+            $stateProvider.state(page1State)
+        })
+        app.controller("page1Controller", function ($scope) {
+            $scope.data1 = "문자열1"
+            $scope.data2 = "문자열2"
+        })
+    </script>
+</head>
+<title>route2</title>
+<body>
+<div ng-app="test_app">
+    <a ui-sref="mainSomin">main</a>
+    <a ui-sref="page1">page1</a>
+    <hr/>
+    <ui-view></ui-view>
+</div>
+</body>
+</html>

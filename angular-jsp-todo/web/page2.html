@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_ko-kr.min.js"
+            integrity="sha512-L+5r2Nh9KpPL1tmoowEEzeUoA87hDSSkUvY2lH26VvWaxL3GBvHknSulPL9Ajatv8wx8mDoCPaNBCqkqA4qS4A=="
+            crossorigin="anonymous"></script>
+    <title>page2</title>
+</head>
+<body>
+<h2>page2</h2>
+<h4> hihi router</h4>
+<h4> {{data2}}</h4>
+<table border="1">
+    <thead>
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>
+        </tr>
+    </thead>
+    <tbody ng-repeat="d in jsonData">
+        <tr>
+            <td>{{d.name}}</td>
+            <td>{{d.age}}</td>
+            <td>{{d.kor}}</td>
+            <td>{{d.eng}}</td>
+            <td>{{d.math}}</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

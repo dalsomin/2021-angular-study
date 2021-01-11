@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.19/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.7.2/angular-locale_ko-kr.min.js"
+            integrity="sha512-L+5r2Nh9KpPL1tmoowEEzeUoA87hDSSkUvY2lH26VvWaxL3GBvHknSulPL9Ajatv8wx8mDoCPaNBCqkqA4qS4A=="
+            crossorigin="anonymous"></script>
+    <title>ui route 모듈화3</title>
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="component/mainComponent.js"></script>
+    <script src="component/page1Component.js"></script>
+    <script>
+        var app = angular.module("test_app", ["ui.router"])
+
+        app.component("mainComponent",{
+            template : "<h1>main컴포넌트로 뺏다</h1>",
+            controller : function(){
+                this.data1 = "컴포넌트로 뺀 컨트롤러1"
+                this.data2 = "컴포넌트로 뺀 컨트롤러2"
+            }
+        } )
+
+
+        app.config(function ($stateProvider, $urlRouterProvider) {
+
+            $urlRouterProvider.otherwise("main")
+
+            var mainState = {
+                name : "main",
+                url: "/main",
+                //template: "<h1>main</h1>"
+                component:mainComponent
+            }
+
+            var page1State={
+                name: "page1",
+                url:"/page1",
+                templateUrl:"page1_route3.html",
+                controller:"controller1"
+            }
+        })
+
+        $stateProvider.state(mainState)
+        $stateProvider.state(page1State)
+
+        // app.controller("controller1", function ($scope) {
+        //     $scope.data1 ="소미나 힘내1"
+        //     $scope.data2 ="소미나 아프지마2"
+        // })
+    </script>
+</head>
+<body ng-app="test_app">
+    <a ui-sref="main">main</a>
+    <a ui-sref="page1">page1</a>
+
+</body>
+</html>
