@@ -7,24 +7,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae0abf81-c7e8-40b4-b3ab-b36187a5798f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index-route1_route.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index-route2_ui_router.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index-route3-nestedview.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index-route3-routemodule.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/component/mainComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/component/tab.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/page1_route2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/page1_route3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/page2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/view/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/ex/index-multiview.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/angular_jsp_todo_war_exploded/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/angular_jsp_todo_war_exploded/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index-event.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/index-event.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index-input.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index-input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/angularjs_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/angularjs_template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/data.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/data.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/data1.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/data1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/data2.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/data2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/data3.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/data3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/index-directive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index-dom.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/index-dom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index-event.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/index-event.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index-event.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/index-event.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index-filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/index-filter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index-http.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/index-http.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index-input.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/index-input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index-ngshowvalid.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/index-ngshowvalid.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index-route1_route.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/index-route1_route.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index-route2_ui_router.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/index-route2_ui_router.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index-route3-nestedview.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/index-route3-nestedview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index-route3-routemodule.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/index-route3-routemodule.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index-select.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/index-select.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index-service-cal.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/index-service-cal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/index-table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/component/mainComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/js/component/mainComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/component/tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/js/component/tab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/js/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/page1_route2.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/page1_route2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/page1_route3.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/page1_route3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/page2.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/page2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/view/content-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/view/content-view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/view/footer-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/view/footer-view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/view/header-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/view/header-view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/view/main-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/view/main-view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/view/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/view/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/view/sub1.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/view/sub1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/view/sub2.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/view/sub2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/view/sub3.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/ex/view/sub3.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +84,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/view" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
@@ -83,9 +105,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\selfstudy2021\TIL-angular\angular-jsp-todo\web\ex" />
       <recent name="C:\selfstudy2021\angular-jsp-todo\web" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\selfstudy2021\TIL-angular\angular-jsp-todo\web\view" />
       <recent name="C:\selfstudy2021\angular-jsp-todo\web" />
     </key>
   </component>
@@ -154,7 +178,8 @@
       <workItem from="1609924002363" duration="2529000" />
       <workItem from="1609990266286" duration="24828000" />
       <workItem from="1610066192986" duration="4197000" />
-      <workItem from="1610360426242" duration="6014000" />
+      <workItem from="1610360426242" duration="6664000" />
+      <workItem from="1610603182610" duration="1041000" />
     </task>
     <servers />
   </component>
