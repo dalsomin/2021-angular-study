@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.19/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.7.2/angular-locale_ko-kr.min.js"
+            integrity="sha512-L+5r2Nh9KpPL1tmoowEEzeUoA87hDSSkUvY2lH26VvWaxL3GBvHknSulPL9Ajatv8wx8mDoCPaNBCqkqA4qS4A=="
+            crossorigin="anonymous"></script>
+    <script>
+        var app = angular.module("test_app",["ui.router"])
+        app.config(function ($stateProvider, $urlRouterProvider) {
+            $urlRouterProvider.otherwise("main")
+            var mainState = {
+                name :"main",
+                url: "/sominmain",
+                views: {
+                    "sominmain":{
+                        templateUrl:"view/main-view.html"
+                    },
+                    "sominheader@sominmain":{
+                        templateUrl:"view/header-view.html"
+                    },
+                    "somincontent@sominmain":{
+                        templateUrl:"view/header-view.html"
+                    },
+                    "sominfooter@sominmain":{
+                        templateUrl:"view/footer-view.html"
+                    }
+                }
+            }
+            $stateProvider.state(mainState)
+        })
+    </script>
+    <title>multiview</title>
+</head>
+<body ng-app="test_app">
+<ui-view name="main">
+
+</ui-view>
+</body>
+</html>
